@@ -21,3 +21,22 @@ result = str(int(array[0]) + int(array[1])**2)
 a.close
 with open('output.txt', 'wt') as b:
     b.write (result)
+
+  #задание 2
+a = 1
+b = 1
+inp = open ('input.txt')
+n = inp.readline()
+n = int(n)
+inp.close
+i = 0
+while i < n-2:
+    c = a + b
+    a = b
+    b = c
+    i = i+1
+b = str(b)
+with open('output.txt', 'wt') as f:
+    f.write (b)
+print (b)
+
