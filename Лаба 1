@@ -1,0 +1,23 @@
+Задание 1
+
+  # 1
+a, b = map(int,input().split()) # первое задание
+print (a + b)
+
+  # 3
+a = open ('input.txt', 'rt')
+data = a.readline()
+array = data.split(' ')
+result = str(int(array[0]) + int(array[1]))
+a.close
+with open('output.txt', 'wt') as b:
+    b.write (result)
+
+  # 4
+a = open ('input.txt', 'rt')
+data = a.readline()
+array = data.split(' ')
+result = str(int(array[0]) + int(array[1])**2)
+a.close
+with open('output.txt', 'wt') as b:
+    b.write (result)
