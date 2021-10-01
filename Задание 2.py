@@ -3,7 +3,7 @@
 import time
 t_start = time.perf_counter()
 
-a = open ('input2.txt')
+a = open ('input.txt')
 lines = a.readlines()
 check = int(lines[0])
 a.close
@@ -22,7 +22,7 @@ if check < 1000:
         ind = arr.index(j)
         indexs.append(ind)
     out = ' '.join(str(e) for e in arr)
-    with open ('output2.txt', 'wt') as b:
+    with open ('output.txt', 'wt') as b:
         b.write (out)
     print (indexs)
 else:

@@ -1,7 +1,7 @@
 import time
 t_start = time.perf_counter()
 
-a = open ('input1.txt')
+a = open ('input.txt')
 lines = a.readlines()
 check = int(lines[0])
 a.close
@@ -16,7 +16,7 @@ if check < 1000:
             j -= 1
         arr[j+1] = key 
     out = ' '.join(str(e) for e in arr)
-    with open ('output1.txt', 'wt') as b:
+    with open ('output.txt', 'wt') as b:
         b.write (out)
 else:
     print ('Mistake')

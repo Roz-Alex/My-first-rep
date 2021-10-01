@@ -11,12 +11,12 @@ def linesearch(arr, element):
     return index
 
 arr = [1, 2, 3, 4, 5, 2, 1]
-a = open ('input4.txt')
+a = open ('input.txt')
 arr = a.readline()
 a.close
 arr = list(map(int, arr.split()))
 
-with open('input4.txt') as rd:
+with open('input.txt') as rd:
     for i in range(1):
         next(rd)
     number = int(next(rd))
@@ -25,7 +25,7 @@ if len(arr) <= 1000:
 else:
     print ('Error')
 out = ' '.join(str(e) for e in ind)
-with open ('output4.txt', 'wt') as f:
+with open ('output.txt', 'wt') as f:
     f.write(out)
 
 print("Время работы: %s секунд " % (time.perf_counter() - t_start))
