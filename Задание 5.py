@@ -1,6 +1,3 @@
-import time
-t_start = time.perf_counter()
-
 a = open ('input.txt')
 lines = a.readlines()
 check = int(lines[0])
@@ -19,5 +16,3 @@ if check<1000:
         b.write (out)
 else:
     print ('Mistake')
-
-print("Время работы: %s секунд " % (time.perf_counter() - t_start))

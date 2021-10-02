@@ -1,6 +1,3 @@
-import time
-t_start = time.perf_counter()
-
 def linesearch(arr, element):
     index = []
     for i in range (len(arr)):
@@ -10,16 +7,12 @@ def linesearch(arr, element):
         index.append (-1)
     return index
 
-arr = [1, 2, 3, 4, 5, 2, 1]
 a = open ('input.txt')
-arr = a.readline()
+lines = a.readlines()
+number = int(lines[3])
 a.close
-arr = list(map(int, arr.split()))
+arr = list(map(int, lines [4].split()))
 
-with open('input.txt') as rd:
-    for i in range(1):
-        next(rd)
-    number = int(next(rd))
 if len(arr) <= 1000:
     ind = (linesearch (arr, number))
 else:
@@ -27,5 +20,3 @@ else:
 out = ' '.join(str(e) for e in ind)
 with open ('output.txt', 'wt') as f:
     f.write(out)
-
-print("Время работы: %s секунд " % (time.perf_counter() - t_start))

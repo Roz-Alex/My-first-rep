@@ -3,8 +3,7 @@ lines = a.readlines()
 check = int(lines[0])
 a.close
 if check < 1000:
-    arr = lines[1]
-    arr = list(map(int, arr.split()))
+    arr = list(map(int, lines[1].split()))
     for i in range(1, check):
         key = arr[i]
         j = i-1
