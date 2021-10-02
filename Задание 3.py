@@ -1,6 +1,3 @@
-import time
-t_start = time.perf_counter()
-
 a = open ('input.txt')
 lines = a.readlines()
 check = int(lines[0])
@@ -11,7 +8,7 @@ if check < 1000:
     for i in range(1, check):
         key = arr[i]
         j = i-1
-        while j >=0 and key > arr[j] :
+        while j >=0 and key < arr[j] :
             arr[j+1] = arr[j]
             j -= 1
         arr[j+1] = key 
@@ -20,5 +17,3 @@ if check < 1000:
         b.write (out)
 else:
     print ('Mistake')
-
-print("Время работы: %s секунд " % (time.perf_counter() - t_start))
