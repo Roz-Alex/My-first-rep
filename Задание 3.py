@@ -12,6 +12,8 @@ if check < 1000:
             arr[j+1] = arr[j]
             j -= 1
         arr[j+1] = key 
+    for j in range (check//2):
+        arr[j], arr[-j-1] = arr[-j-1], arr[j]
     out = ' '.join(str(e) for e in arr)
     with open ('output.txt', 'wt') as b:
         b.write (out)
