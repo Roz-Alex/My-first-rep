@@ -9,14 +9,14 @@ def linesearch(arr, element):
 
 a = open ('input.txt')
 lines = a.readlines()
-number = int(lines[3])
+number = int(lines[4])
 a.close
-arr = list(map(int, lines [4].split()))
+arr = list(map(int, lines [3].split()))
 
 if len(arr) <= 1000:
     ind = (linesearch (arr, number))
 else:
     print ('Error')
-out = ' '.join(str(e) for e in ind)
+out = ', '.join(str(e) for e in ind)
 with open ('output.txt', 'wt') as f:
     f.write(out)
